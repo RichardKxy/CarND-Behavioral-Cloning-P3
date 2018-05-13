@@ -70,29 +70,23 @@ For details about how I created the training data, see the next section.
 
 #### 1. Solution Design Approach
 
-At first, I only collected one forward and backward track on first track. Since model architecture had overfitting, I tried to add Dropout or Maxpooling to reducce overfitting. 
+The overall strategy for deriving a model architecture was to use Nvidia cnn architecture.
 
-The overall strategy for deriving a model architecture was to ...
+I followed the content in Behavior Cloning project. At first, I used Lenet to train the model. The performance was not good. In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. 
 
-My first step was to use a convolution neural network model similar to the ... I thought this model might be appropriate because ...
+At first, I only collected one forward and backward track on first track. I found that this model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. Therefore, I added some dropout and pooling layers to lenet. However, the model is not good enough.
 
-In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. 
+Then based on the introduction of Nvidia cnn architecture, I modified my "model.py". According to the layout of each image, I used Cropping to deal with images and increase the performance of my model.
 
-To combat the overfitting, I modified the model so that ...
+The final step was to run the simulator to see how well the car was driving around track one. I built a model which is able to drive around track one. However, it has a bad behavior around track two. Therefore, I captured two tracks around track two, which makes the model more general. Rebuild the model based on more general data.
 
-Then I ... 
-
-The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track... to improve the driving behavior in these cases, I ....
-
-At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
+At the end of the process, the vehicle is able to drive autonomously around the track one and two without leaving the road.
 
 #### 2. Final Model Architecture
 
 The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
-
-![alt text][image1]
 
 #### 3. Creation of the Training Set & Training Process
 
