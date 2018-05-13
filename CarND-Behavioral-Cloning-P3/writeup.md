@@ -13,11 +13,11 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./images/cnn_architecture.png "CNN Architecture"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
+[image2]: ./images/final_architectrue.png "Final Architecture"
+[image3]: ./images/center.jpg "Center"
+[image4]: ./images/left.jpg "Left"
+[image5]: ./images/right.jpg "Right"
+[image6]: ./images/center_track_two.png "Center Track Two"
 [image7]: ./examples/placeholder_small.png "Flipped Image"
 
 ## Rubric Points
@@ -88,30 +88,25 @@ The final model architecture (model.py lines 18-24) consisted of a convolution n
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
-#### 3. Creation of the Training Set & Training Process
-
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
-
 ![alt text][image2]
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+#### 3. Creation of the Training Set & Training Process
+
+To capture good driving behavior, I first recorded two different laps on track one using center lane driving. Here is an example image of center lane driving:
 
 ![alt text][image3]
+
+Then I added  the left side and right sides of the road back to train the modeal. 
+
 ![alt text][image4]
 ![alt text][image5]
 
 Then I repeated this process on track two in order to get more data points.
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
-
 ![alt text][image6]
-![alt text][image7]
 
-Etc ....
+After the collection process, I then preprocessed this data by lambda layer to normalize the data.
 
-After the collection process, I had X number of data points. I then preprocessed this data by ...
+I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
-
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The number of epochs was 5. I used an adam optimizer so that manually training the learning rate wasn't necessary.
