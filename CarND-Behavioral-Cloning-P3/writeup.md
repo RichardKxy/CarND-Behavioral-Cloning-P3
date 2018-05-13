@@ -17,7 +17,7 @@ The goals / steps of this project are the following:
 [image3]: ./images/center.jpg "Center"
 [image4]: ./images/left.jpg "Left"
 [image5]: ./images/right.jpg "Right"
-[image6]: ./images/center_track_two.png "Center Track Two"
+[image6]: ./images/center_track_two.jpg "Center Track Two"
 [image7]: ./examples/placeholder_small.png "Flipped Image"
 
 ## Rubric Points
