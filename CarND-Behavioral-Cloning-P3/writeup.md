@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 [image4]: ./images/left.jpg "Left"
 [image5]: ./images/right.jpg "Right"
 [image6]: ./images/center_track_two.jpg "Center Track Two"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+[image7]: ./images/model.png "Loss"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -110,3 +110,7 @@ After the collection process, I then preprocessed this data by lambda layer to n
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The number of epochs was 5. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+
+At the end of "model.py", I added some code to visualize training and validation loss. The following figure shows the loss.
+
+![alt text][image7]
