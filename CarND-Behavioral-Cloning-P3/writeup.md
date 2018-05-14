@@ -13,7 +13,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./images/cnn_architecture.png "CNN Architecture"
-[image2]: ./images/final_architectrue.png "Final Architecture"
+[image2]: ./images/final_architecture.png "Final Architecture"
 [image3]: ./images/center.jpg "Center"
 [image4]: ./images/left.jpg "Left"
 [image5]: ./images/right.jpg "Right"
@@ -114,3 +114,5 @@ I used this training data for training the model. The validation set helped dete
 At the end of "model.py", I added some code to visualize training and validation loss. The following figure shows the loss.
 
 ![alt text][image7]
+
+There are two videos that show the behavior of vehicle on track one and two.
